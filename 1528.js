@@ -10,6 +10,6 @@ var restoreString = function (s, indices) {
   for (let i = 0; i < indices.length; i++) {
     result[sorted[i]] = s[i];
   }
-
+  
   return result.join("");
 };
