@@ -10,5 +10,6 @@ var containsDuplicate = function (nums) {
       return true;
     }
   }
+  
   return false;
 };
