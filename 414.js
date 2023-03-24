@@ -3,7 +3,7 @@
  * @return {number}
  */
 var thirdMax = function (nums) {
-  const sorted = [...nums].sort((a, b) => a - b);
+  const sorted = [...new Set(nums)].sort((a, b) => a - b);
   let current;
   let count = 0;
 
@@ -18,5 +18,5 @@ var thirdMax = function (nums) {
     }
   }
 
-  return nums[nums.length - 1];
+  return sorted[sorted.length - 1];
 };
