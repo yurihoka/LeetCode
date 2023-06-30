@@ -26,5 +26,6 @@ var findDifference = function (nums1, nums2) {
 
   ans.push(ans0);
   ans.push(ans1);
+
   return ans;
 };
