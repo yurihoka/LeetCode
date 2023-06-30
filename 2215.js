@@ -3,29 +3,15 @@
  * @param {number[]} nums2
  * @return {number[][]}
  */
-var findDifference = function (nums1, nums2) {
-  const ans = [];
-  const ans0 = [];
-  const ans1 = [];
+var findDifference = function(nums1, nums2) {
+  const s1 = new Set(nums1)
+  const s2 = new Set(nums2)
 
-  for (let i = 0; i < nums1.length; i++) {
-    if (!nums2.includes(nums1[i])) {
-      if (!ans0.includes(nums1[i])) {
-        ans0.push(nums1[i]);
+  for (let item of nums1){
+      if (s2.has(item)) {
+          s1.delete(item)
+          s2.delete(item)
       }
-    }
   }
-
-  for (let i = 0; i < nums2.length; i++) {
-    if (!nums1.includes(nums2[i])) {
-      if (!ans1.includes(nums2[i])) {
-        ans1.push(nums2[i]);
-      }
-    }
-  }
-
-  ans.push(ans0);
-  ans.push(ans1);
-
-  return ans;
+  return [Array.from(s1),Array.from(s2)]
 };
