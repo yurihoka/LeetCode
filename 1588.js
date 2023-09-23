@@ -12,6 +12,6 @@ var sumOddLengthSubarrays = function (arr) {
       }
     }
   }
-
+  
   return output;
 };
