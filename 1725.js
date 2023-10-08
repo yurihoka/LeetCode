@@ -7,7 +7,7 @@ var countGoodRectangles = function (rectangles) {
   let count = 0;
 
   for (let i = 0; i < rectangles.length; i++) {
-    let minSide = Math.min(rectangles[i][0], rectangles[i][1]);
+    const minSide = Math.min(rectangles[i][0], rectangles[i][1]);  
 
     if (minSide > max) {
       count = 0;
