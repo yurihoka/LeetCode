@@ -3,10 +3,10 @@
  * @return {number[]}
  */
 var sumZero = function (n) {
-  let newNum = Math.floor(n / 2);
+  const times = Math.floor(n / 2);
   const result = [];
 
-  for (let i = 1; i <= newNum; i++) {
+  for (let i = 1; i <= times; i++) {
     result.push(i, -i);
   }
 

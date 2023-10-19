@@ -11,6 +11,8 @@ var countKDifference = function (nums, k) {
     for (let j = i + 1; j < sorted.length; j++) {
       if (sorted[j] - sorted[i] === k) {
         count++;
+      } else if (sorted[j] - sorted[i] > k) {
+        break;
       }
     }
   }
