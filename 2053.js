@@ -4,7 +4,7 @@
  * @return {string}
  */
 var kthDistinct = function (arr, k) {
-  let map = {};
+  const map = new Map();
 
   for (let s of arr) {
     if (map[s] !== undefined) {
@@ -15,7 +15,7 @@ var kthDistinct = function (arr, k) {
   }
 
   let i = 0;
-  
+
   for (let s of arr) {
     if (map[s] === 1 && ++i === k) {
       return s;
