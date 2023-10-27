@@ -6,5 +6,5 @@
 var findDelayedArrivalTime = function (arrivalTime, delayedTime) {
   const sum = arrivalTime + delayedTime;
 
-  return sum >= 24 ? sum - 24 : sum;
+  return sum % 24;
 };

@@ -4,10 +4,10 @@
  * @return {number}
  */
 var commonFactors = function (a, b) {
-  const dividedB = [];
+  const answer = [];
 
   for (let i = 1; i <= a; i++) {
-    a % i === 0 && b % i === 0 ? dividedB.push(i) : null;
+    a % i === 0 && b % i === 0 ? answer.push(i) : null;
   }
-  return dividedB.length;
+  return answer.length;
 };
