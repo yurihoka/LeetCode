@@ -8,16 +8,16 @@ var selfDividingNumbers = function (left, right) {
 
   for (let i = left; i <= right; i++) {
     let numStr = i.toString();
-    let allPass = true;
+    let isAllPass = true;
 
     for (j = 0; j < numStr.length; j++) {
       if (i % parseInt(numStr[j]) !== 0) {
-        allPass = false;
+        isAllPass = false;
         break;
       }
     }
 
-    if (allPass) {
+    if (isAllPass) {
       ans.push(i);
     }
   }
