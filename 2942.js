@@ -4,12 +4,16 @@
  * @return {number[]}
  */
 var findWordsContaining = function (words, x) {
-  const ans = [];
+  const arrayOfIndice = [];
 
   for (let i = 0; i < words.length; i++) {
     if (words[i].includes(x)) {
-      ans.push(i);
+      arrayOfIndice.push(i);
     }
   }
-  return ans;
+  return arrayOfIndice;
 };
+
+// console.log(findWordsContaining(["leet","code"], "e"));
+// console.log(findWordsContaining(["abc","bcd","aaaa","cbc"], "a"));
+// console.log(findWordsContaining(["abc","bcd","aaaa","cbc"], "z"));
