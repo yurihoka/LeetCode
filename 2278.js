@@ -4,13 +4,9 @@
  * @return {number}
  */
 var percentageLetter = function (s, letter) {
-  const divideS = s.split("");
-  let count = 0;
-
-  for (let i = 0; i < divideS.length; i++) {
-    if (divideS[i] === letter) {
-      count++;
-    }
-  }
-  return Math.floor((count / divideS.length) * 100);
+  const count = s.split("").filter((char) => char === letter).length;
+  return Math.floor((count / s.length) * 100);
 };
+
+// console.log(percentageLetter("foobar", "o"));
+// console.log(percentageLetter("jjjj", "k"));
