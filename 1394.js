@@ -14,4 +14,4 @@ var findLucky = function (arr) {
   return result.length ? Math.max(...result) : -1;
 };
 
-findLucky([2, 2, 3, 4]);
+// findLucky([2, 2, 3, 4]);

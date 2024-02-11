@@ -14,3 +14,4 @@ var findMaxK = function (nums) {
   }
   return -1;
 };
+// console.log();

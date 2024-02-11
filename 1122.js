@@ -4,8 +4,6 @@
  * @return {number[]}
  */
 var relativeSortArray = function (arr1, arr2) {
-  // Compare the el in arr1 and arr2
-  // Compare el in arr1 from the first with using for-loop, with arr2
   const ans = [];
 
   for (let i = 0; i < arr2.length; i++) {
@@ -19,11 +17,8 @@ var relativeSortArray = function (arr1, arr2) {
   }
   arr1.sort((a, b) => a - b);
   return [...ans, ...arr1];
-  //   return ans;
-  // If they are matched, push el in arr1 to the new array
-  // If they are not matched, insert it from the back
 };
 
-console.log(
-  relativeSortArray([2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19], [2, 1, 4, 3, 9, 6])
-);
+// console.log(
+//   relativeSortArray([2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19], [2, 1, 4, 3, 9, 6])
+// );
