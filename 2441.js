@@ -3,15 +3,18 @@
  * @return {number}
  */
 var findMaxK = function (nums) {
-  const sortedNums = nums.sort((a, b) => b - a);
+  const positiveMaxK = [-1];
 
-  for (let i = 0; i < sortedNums.length; i++) {
-    for (let j = 0; j < sortedNums.length; j++) {
-      if (sortedNums[i] === -sortedNums[j]) {
-        return sortedNums[i];
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] === -nums[j]) {
+        positiveMaxK.push(Math.abs(nums[j]));
       }
     }
   }
-  return -1;
+  return Math.max(...positiveMaxK);
 };
-// console.log();
+
+// console.log(findMaxK([-1, 2, -3, 3]));
+// console.log(findMaxK([-1, 10, 6, 7, -7, 1]));
+// console.log(findMaxK([-10, 8, 6, 7, -2, -3]));
