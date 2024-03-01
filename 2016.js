@@ -3,17 +3,20 @@
  * @return {number}
  */
 var maximumDifference = function (nums) {
-  let result = 0;
+  let maxDiff = 0;
 
   for (let i = 0; i < nums.length; i++) {
     for (let j = i + 1; j < nums.length; j++) {
-      if (nums[j] > nums[i]) {
-        diff = nums[j] - nums[i];
-        if (diff > result) {
-          result = diff;
-        }
+      if (nums[j] <= nums[i]) {
+        continue;
+      }
+
+      const diff = nums[j] - nums[i];
+
+      if (diff > maxDiff) {
+        maxDiff = diff;
       }
     }
   }
-  return result ? result : -1;
+  return maxDiff ? maxDiff : -1;
 };
