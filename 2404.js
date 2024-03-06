@@ -18,8 +18,8 @@ var mostFrequentEven = function (nums) {
       if (duplicateList.length > count) {
         count = duplicateList.length;
         number = item;
-      } else if (duplicateList.length == count && item < number) {
-        number = item;
+      } else if (duplicateList.length == count) {
+        number = Math.min(number, item);
       }
     }
   }
